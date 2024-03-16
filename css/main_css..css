@@ -1,0 +1,465 @@
+
+/* ===============================================> help css here  */
+
+*{margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+:root{
+/* ===============> stock font here*/
+--Montserrat-main-font: "Montserrat", sans-serif;
+--Hind-2nd-font: "Hind", sans-serif;
+/* font-family: "Montserrat", sans-serif; */
+/* ===============> stock color here*/
+--brand-color-yellow-Sunray : #f1a008;
+--light-color-grey-color: #5a5c5c;
+--rich-black-color: #010304;
+--white-color: #ffffff;
+
+}
+
+.container{
+    max-width: 1150px;
+}
+body{
+    font-family: var(--Didact-Gothic-2nd-font);
+    transition: all 0.3s ease;
+}
+p{font-size: 16px; font-weight: 400; font-family: var(--Hind-2nd-font); color: var(--light-color-grey-color);}
+
+ul, li{list-style: none;}
+
+a{text-decoration: none; color: var(--rich-black-color);}
+
+h1, h2, h3, h4, h5, h6{ font-weight: 400 !important; margin:0; text-transform: capitalize; font-family: var(--Montserrat-main-font);}
+
+h1{  font-size: clamp(25px, 8vw, 70px);}
+
+h2{  font-size: clamp(10px, 7vw, 35px); font-weight:500!important;}
+
+h3{ font-size: clamp(7px, 5vw, 20px);}
+
+h4{font-size: clamp(8px, 5vw, 18px);}
+
+img{width: 100%;}
+
+/* ===============================================> HELP CSS ENDS HERE  */
+
+/* ===============================================> header and nvbar  
+---------------------------------------------------------------*/
+
+
+/* ---------------------------------------------------------------
+===============================================> header ends nvbar  */
+
+
+
+/* ---------------------------------------> spinner css starts here */
+.spinner-cnt{background-color: rgb(0, 0, 0);position: fixed;top: 0; left: 0;width: 100%;height: 100%;z-index: 9999;display: flex;align-items: center;justify-content: center;transition: all 0.2s;}
+.spinner-cnt .spinner-border{color: #00A3C4;width: 50px;height: 50px;}
+/* ---------------------------------------> spinner css ends here */
+
+
+
+/* ===============================================> header and nvbar  
+---------------------------------------------------------------*/
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.5s ease-in;
+    padding: 20px 0;
+    background-color: #fff;
+}
+
+/* -----------------------------> brand logo  */
+
+header .brand-logo img{
+    width: 80px;
+}
+
+/* -----------------------------> menu items  */
+header .navbar_here{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* position: relative; */
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a{
+    font-family: var(--Montserrat-main-font);
+    color: var(--brand-color-dark-green);
+    display: block;
+    position: relative;
+    padding-bottom: 2px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+nav ul li .active{
+    color: var(--brand-color-yellow-Sunray);
+}
+nav ul li a:hover{
+    color: var(--brand-color-yellow-Sunray);
+}
+
+nav ul li a::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    /* height: 100%; */
+    height: 2px;
+    background-color: var(--brand-color-yellow-Sunray);
+    /* background-color: red; */
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform  0.2s ease-in;
+    /* z-index: -1; */
+}
+nav ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* -----------------------------> some custom css menu buttom design  */
+header .menu-btn .animation-btn:first-child{
+    background-color: #fff;
+    color: var(--rich-black-color);
+    border: 1px solid #9e9e9e31;
+}
+
+
+/* -----------------------------> hamburger  css  */
+header .hamburger{
+    cursor: pointer;
+    padding: 4px 7px;
+    display: none;
+}
+.hamburger .bar{
+    width: 30px;
+    height: 2px;
+    background-color: #010304;
+    margin: 7px 0;
+    transition: all 0.5s ease-in-out;
+}
+.hamburger_open .bar:nth-child(1){
+    transform: translateY(11px) rotate(45deg);
+}
+.hamburger_open .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburger_open .bar:nth-child(3){
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* -----------------------------> header sticky here css  */
+header.sticky{
+    background-color: #FFF;
+    padding: 12px 0;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+
+/* ---------------------------------------------------------------
+===============================================> header ends nvbar  */
+
+.slide{
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    
+}
+
+.slide-01,
+.slide-02{
+    background-image: url(../image/Hero\ Section\ Image\ 01.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #010304b2;
+}
+.slide-02{
+    background-image: url(../image/Hero\ Section\ Image\ 02.jpeg) !important;
+}
+.hero-section-cnt h1{
+    font-family: var(--Hind-2nd-font);
+    font-weight: 600!important;
+}
+
+
+
+
+/* -----------------------------> items dot here */
+
+.owl-theme .owl-dots {
+	display: block;
+    transition: all 0.5s ease;
+}
+.owl-theme .owl-dots span{
+    margin-top: 10px !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+	background-color: #00a3c49a;
+    transition: all 0.5s ease;
+}
+
+
+
+/* ------------------> owl carosul nav or icon here icon buttom */
+.owl-theme .owl-nav button{
+    border: none !important;
+    outline: none !important;
+    
+  }
+
+  /* .owl-theme .owl-nav [class*="owl-"]:hover {
+      background: transparent;
+  } */
+
+  /* .owl-theme .owl-nav button span{
+       background-color: white;
+       border-radius: 1px;
+       box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  } */
+  
+  /* .owl-theme .owl-nav button span:hover{
+      
+  } */
+
+  .owl-prev,
+  .owl-next{
+     position: absolute;
+     top: 50%;
+     font-size: 25px !important;
+     border-radius: 50px!important;
+     background-color: #00040560 !important;
+     color: #fff !important;
+  }
+  .owl-prev i,
+  .owl-next i{
+    padding: 10px;
+    /* margin-bottom: -20px; */
+  }
+
+  .owl-prev{
+      left: 25px;
+      /* left: 0; */
+      /* margin-top: -10px !important; */
+  }
+  .owl-next{
+      right: 25px;
+      /* right: 0; */
+  }
+  .owl-prev:hover,
+  .owl-next:hover{
+      color: #ffffff !important;
+  }
+
+
+
+
+
+
+/* ===============================================> Interface starts nvbar  
+---------------------------------------------------------------*/
+.Interface-tex{
+    padding: 100px 0;
+    width: 100%;
+    background-color: #fffafa;
+}
+.Interface-item p{
+    border-bottom: 1px solid rgb(199, 196, 196);
+}
+
+/* ---------------------------------------------------------------
+===============================================> Interface ends  */
+
+
+
+#counter-card{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 40px 0; */
+    background-color: #f8f8db;
+}
+.counter-card-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    height: 200px;
+}
+@media (max-width:1120px){
+    .counter-card-grid{
+        grid-template-columns: repeat(2, 1fr);
+        transition: all 0.5s ease-in-out;
+        gap: 50px;
+    }
+
+.counter-card-cnt span{
+    font-size: 40px !important;
+}
+}
+
+@media (max-width:576px){
+    .counter-card-grid{
+        grid-template-columns: repeat(1, 1fr);
+        transition: all 0.5s ease-in-out;
+        gap: 30px;
+    }
+}
+
+/* .counter-card-info{
+    background-color: #041518;
+    cursor: pointer;
+    border: 1px solid #0fe9072f;
+    border-bottom: 8px solid #f80cd9;
+} */
+
+
+/* .counter-card-cnt i{
+    font-size: 70px;
+    color: #f80cd9;
+} */
+
+.counter-card-cnt span{
+    font-family: var(--Oswald-main-font);
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+
+
+
+
+.Our-team-info-gird{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 25px;
+}
+
+@media (max-width:992px){
+    .Our-team-info-gird{
+        grid-template-columns: auto auto;
+        transition: all 0.5s ease-in-out;
+        gap: 25px;
+    }
+}
+
+
+
+@media (max-width:578px){
+    .Our-team-info-gird{
+        grid-template-columns: auto;
+        transition: all 0.5s ease-in-out;
+        gap: 25px;
+    }
+}
+
+
+.Our-team-card{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+    position: relative;
+}
+
+.Our-team-card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: saturate(0%);
+    -webkit-filter: saturate(0%);
+    -moz-filter: saturate(0%);
+    transition: all 0.3s ease;
+}
+.Our-team-card:hover img{
+    filter: saturate(112%);
+    -webkit-filter: saturate(112%);
+    -moz-filter: saturate(112%);
+    /* filter:  brightness(79%); */
+    transition: all 0.3s ease;
+}
+
+
+.Our-team-card-caption{
+    background-color: #eef3f3;
+}
+.Our-team-card-ovrlay h4,
+.Our-team-card-caption h4{
+    font-weight: 400;
+    font-size: 14px;
+}
+.Our-team-card-ovrlay{
+    position: absolute;
+    bottom: 0; 
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+.Our-team-card:hover .Our-team-card-ovrlay{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease-in;
+    bottom: 50;
+}
+
+
+/* ===============================================> Clients starts and nvbar  
+---------------------------------------------------------------*/
+.Clients-slider-logo .owl-stage-outer{
+    height: 120px;
+}
+.logo-slide img{
+    width: 100px !important;
+    height: auto;
+    text-align: center !important;
+}
+.logo-slide{
+    text-align: center;
+}
+.owl-item{
+    text-align: center !important;
+}
+element {
+	width: 264.2px;
+}
+/* ---------------------------------------------------------------
+===============================================> Clients ends   */
+
+
+
+
+
+/* ===============================================> Amazing post starts and   
+---------------------------------------------------------------*/
+.amazing-image-slider{
+    object-fit: cover;
+}
+.image-slide-items img{
+    border-radius: 3px !important;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+    cursor: pointer;
+}
+.amazing-image-slider .owl-prev,
+.amazing-image-slider .owl-next{
+     top: 37%;
+     background-color: #05c1f085 !important;
+     color: #fff !important;
+  }
+  
+
+/* ---------------------------------------------------------------
+===============================================> Amazing post ends */
+
+
+
+

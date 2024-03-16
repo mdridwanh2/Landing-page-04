@@ -1,0 +1,69 @@
+
+@media (max-width:1120px){
+    /* ------------------------------------> hamurger here  */
+        .navbar_here .hamburger{
+            display: block;
+        }
+    
+    /* ------------------------------------> menu button  */
+        header .navbar_here .menu-btn{
+            display: none !important;
+            transition: all 0.5s ease-in-out;
+        }
+
+    /* ------------------------------------> nav ul li a:befor none */
+        nav ul li a::before{
+            display: none;
+        }
+    /* ------------------------------------>header sticky */
+        header.sticky{
+            padding: 15px 0;
+        }
+
+
+    /* ------------------------------------> menu items (ul li )  */
+        header .menuLinks{
+            position: absolute;
+            top: 100%; 
+            right: -100%;
+            background-color: #fcf2f2;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            width: 80%;
+            height: 100vh;
+            transition: all 0.5s ease-in-out;
+            padding-top: 30px;
+        }
+        
+        header .menuLinks li{
+            width: 100%;
+            padding-left: 0 !important;
+            margin: 3px 0;
+            margin-left: 50px;
+            transition: all 0.5s ease-in-out;
+            padding: 2px 0 !important;
+        }
+    
+        header .menuLinks li a{
+            padding-left: 0 !important;
+        }
+    /* ------------------------------------>  hamurger click  left to rigth */
+        .menuLinks.nav_links_open{
+            right: 0;
+        }
+
+        .amazing-image-slider{
+            width: 100% !important;
+        }
+    
+    
+    }
+
+    @media (max-width:655px){
+        .Incleible-cnt .btn{
+            margin-top: 15px;
+        }
+    }
+
+    
