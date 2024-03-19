@@ -463,3 +463,70 @@ element {
 
 
 
+
+.two-footer-About-us-cnt span{
+    background-color: var(--light-color-grey-color);
+    height: 1px;
+    margin-top: 40px;
+}
+.two-footer-new-post-image img{
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.two-footer-new-post-text h3{
+    font-size: 18px;
+    color: gray;
+}
+
+.two-footer-favourite-cnt{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7px;
+}
+.two-footer-favourite-info .view-more .view-more-cnt:hover{
+    color: var(--brand-color-yellow-Sunray) !important;
+    cursor: pointer;
+}
+
+.two-footer-favourite-info .view-more h3{
+    /* padding: 10px 0; */
+    font-weight: 500 !important;
+    font-size: 15px !important;
+}
+
+
+footer{
+    background-color: #0c0c0c;
+}
+.main-footer-cnt h4{
+    color: #8d8f8f;
+    font-family: var(--Montserrat-main-font);
+    font-size: 15px;
+}
+.footer-cnt-list a{
+    font-family: var(--Montserrat-main-font);
+    font-size: 15px;
+    color: #8d8f8f;
+}
+
+.main-footer-cnt{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.footer-cnt-list{
+    text-align: right;
+    cursor: pointer;
+}
+
+@media (max-width:992px){
+    .main-footer-cnt{
+        grid-template-columns: 1fr;
+        text-align: center !important;
+    }
+    .footer-cnt-list{
+        text-align: center;
+        margin-top: 10px;
+    }
+}
