@@ -6,8 +6,6 @@ window.addEventListener (`scroll`, function (){
 })
 
 
-
-
 // =============> hamburger here
     //----Humburger click and remove navLinks;
     const navLinks = document.querySelector(`.menuLinks`);
@@ -28,111 +26,148 @@ window.addEventListener (`scroll`, function (){
 
 
 
-//----------------> spinere
-const spinner = document.querySelector(`.spinner-cnt`);
-window.addEventListener (`load`, () =>{
-    spinner.style.opacity = `0`;
+// ===========================> spinere
+    const spinner = document.querySelector(`.spinner-cnt`);
+    window.addEventListener (`load`, () =>{
+        spinner.style.opacity = `0`;
 
-    setTimeout(() =>{
-        spinner.style.display = `none`;
-    }, 500);
-})
-
-
-
-
-
-// owl carousel
-$(document).ready(function(){
-    $('.hero-section-slider').owlCarousel({
-        loop:true,
-        // margin:10,
-        items: 1,
-        autoplay: true,
-        smartSpeed: 1000,
-        navText: [`<i class='bx bx-chevron-left'></i>`, `<i class='bx bx-chevron-right'></i>`], //box icon include here
-        // animateOut: 'fadeOut',
-        // autoplayTimeout: 7000,
-        nav:true,
-        responsive:{
-            0:{
-                nav: false,
-                dots: true,
-            },
-            
-            768:{
-                nav: true,
-                dots: true,
-            }
-        }
+        setTimeout(() =>{
+            spinner.style.display = `none`;
+        }, 500);
     })
-  });
 
 
 
-  $('.Clients-slider-logo').owlCarousel({
-    loop:true,
-    // margin:10,
-    nav:false,
-    dots: true,
-    autoplay: true,
-    smartSpeed: 1000,
-    responsive:{
-        0:{
+
+
+// =============================>owl carousel
+    $(document).ready(function(){
+        $('.hero-section-slider').owlCarousel({
+            loop:true,
+            // margin:10,
+            items: 1,
+            autoplay: true,
+            smartSpeed: 1000,
+            navText: [`<i class='bx bx-chevron-left'></i>`, `<i class='bx bx-chevron-right'></i>`], //box icon include here
+            // animateOut: 'fadeOut',
+            // autoplayTimeout: 7000,
+            nav:true,
+            responsive:{
+                0:{
+                    nav: false,
+                    dots: true,
+                },
+                
+                768:{
+                    nav: true,
+                    dots: true,
+                }
+            }
+        })
+    });
+
+
+
+
+// ---------------------------> Clients slider logo 
+        $('.Clients-slider-logo').owlCarousel({
+            loop:true,
+            // margin:10,
+            nav:false,
             dots: true,
-            items:3
-            
-        },
-        600:{
-            dots: true,
-            items:4
-        },
-        1000:{
-            dots: true,
-            items:5
-        }
-    }
-})
+            autoplay: true,
+            smartSpeed: 1000,
+            responsive:{
+                0:{
+                    dots: true,
+                    items:3
+                    
+                },
+                600:{
+                    dots: true,
+                    items:4
+                },
+                1000:{
+                    dots: true,
+                    items:5
+                }
+            }
+        })
+
+
+
+//------------------------>Amazing post two
+            $('.amazing-image-slider').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                smartSpeed: 1000,
+                navText: [`<i class='bx bx-chevron-left'></i>`, `<i class='bx bx-chevron-right'></i>`],
+                animateOut: 'fadeOut',
+                responsive:{
+                    0:{
+                        nav: false,
+                        items:1
+                    },
+                    600:{
+                        nav: false,
+                        items:1
+                    },
+                    1000:{
+                        items:1
+                    }
+                }
+            })
 
 
 
 
-$('.amazing-image-slider').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    smartSpeed: 1000,
-    navText: [`<i class='bx bx-chevron-left'></i>`, `<i class='bx bx-chevron-right'></i>`],
-    animateOut: 'fadeOut',
-    responsive:{
-        0:{
-            nav: false,
-            items:1
-        },
-        600:{
-            nav: false,
-            items:1
-        },
-        1000:{
-            items:1
-        }
-    }
-})
 
-let valueDisplays = document.querySelectorAll(`.counter`)
-let interval = 4000; // milliseconds between each update (5 seconds)
+// =============================> buyers-Say
+        $('.buyers-Say-slider').owlCarousel({
+                loop:true,
+                // margin:10,
+                nav:true,
+                autoplay: true,
+                // center: true,
+                smartSpeed: 1000,
+                navText: [`<i class='bx bx-chevron-left'></i>`, `<i class='bx bx-chevron-right'></i>`],
+                animateOut: 'fadeOut',
+                responsive:{
+                    0:{
+                        nav: false,
+                        items:1
+                    },
+                    600:{
+                        nav: true,
+                        items:1
+                    },
+                    1000:{
+                        nav: true,
+                        items:1
+                    }
+                }
+            })
 
 
-valueDisplays.forEach(valueDisplays =>{
-    let startValue = 0;
-    let endValue = parseInt(valueDisplays.getAttribute 
-    ("Data-val"));
-    let duration = Math.floor(interval / endValue);
-    let counter = setInterval (function(){
-        startValue += 1;
-        valueDisplays.textContent = startValue;
-        if (startValue == endValue){
-            clearInterval (counter);
-        }
-    }, duration);
-})
+
+
+
+
+//======================> counter-card
+        let valueDisplays = document.querySelectorAll(`.counter`)
+        let interval = 4000; // milliseconds between each update (5 seconds)
+
+        valueDisplays.forEach(valueDisplays =>{
+            let startValue = 0;
+            let endValue = parseInt(valueDisplays.getAttribute 
+            ("Data-val"));
+            let duration = Math.floor(interval / endValue);
+            let counter = setInterval (function(){
+                startValue += 1;
+                valueDisplays.textContent = startValue;
+                if (startValue == endValue){
+                    clearInterval (counter);
+                }
+            }, duration);
+        })

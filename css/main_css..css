@@ -283,6 +283,10 @@ header.sticky{
 
 
 
+
+
+/* ===============================================> counter-card starts   
+---------------------------------------------------------------*/
 #counter-card{
     width: 100%;
     display: flex;
@@ -337,10 +341,17 @@ header.sticky{
     color: #ffffff;
 }
 
+/* ---------------------------------------------------------------
+===============================================> counter-card ends  */
 
 
 
 
+
+
+
+/* ===============================================> Our-team starts   
+---------------------------------------------------------------*/
 .Our-team-info-gird{
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -411,6 +422,53 @@ header.sticky{
     transition: all 0.5s ease-in;
     bottom: 50;
 }
+/* ---------------------------------------------------------------
+===============================================> Our-team ends  */
+
+
+
+
+/* ===============================================> pricing-tables starts   
+---------------------------------------------------------------*/
+#pricing-tables{
+    background-image: url(../image/Hero\ Section\ Image\ 02.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000000a9;
+    background-blend-mode: multiply;
+    padding: 100px 0;
+}
+
+.prcing-card-three-divin h4{
+    font-size: 14px;
+}
+.pricing-four-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    gap: 20px;
+}
+
+
+@media (max-width:800px){
+    .pricing-four-card{
+       grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:500px){
+    .pricing-four-card{
+       grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* ---------------------------------------------------------------
+===============================================> pricing-tables ends  */
+
+
 
 
 /* ===============================================> Clients starts and nvbar  
@@ -434,6 +492,38 @@ element {
 }
 /* ---------------------------------------------------------------
 ===============================================> Clients ends   */
+
+
+
+
+/* ===============================================> buyers-Say starts 
+---------------------------------------------------------------*/
+
+#buyers-Say{
+    background-color: #f1faee;
+}
+.buyers-Say-slider-items img{
+    object-fit: cover;
+    border-radius: 50%;
+    
+}
+.buyers-Say-slider-items span{
+    font-family: var(--Montserrat-main-font);
+}
+
+/* .buyers-Say-slider-items {
+    transform: scale(0.9);
+    opacity: 0.5;
+    transition: all 0.5s ease;
+} */
+.buyers-image img{
+   max-width: 18%;
+   margin: auto !important;
+}
+
+
+/* ---------------------------------------------------------------
+===============================================> buyers-Say ends  */
 
 
 
@@ -463,6 +553,10 @@ element {
 
 
 
+
+
+/* ===============================================> two-footer starts  
+---------------------------------------------------------------*/
 
 .two-footer-About-us-cnt span{
     background-color: var(--light-color-grey-color);
@@ -495,7 +589,15 @@ element {
     font-weight: 500 !important;
     font-size: 15px !important;
 }
+/* ---------------------------------------------------------------
+===============================================> two-footer ends */
 
+
+
+
+
+/* ===============================================> footer starts  
+---------------------------------------------------------------*/
 
 footer{
     background-color: #0c0c0c;
@@ -530,3 +632,6 @@ footer{
         margin-top: 10px;
     }
 }
+
+/* ---------------------------------------------------------------
+===============================================> footer ends */
