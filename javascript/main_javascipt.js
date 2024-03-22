@@ -122,6 +122,38 @@ window.addEventListener (`scroll`, function (){
 
 
 
+//----------------> JavaScript filter here
+
+$(document).ready (function(){
+    $(`.btn`).click (function(){
+        $(this).addClass (`active`).siblings().removeClass(`active`);
+        var filter = $(this).attr (`data-filter`);
+        if (filter == `all`){
+            $(`.image`).show (400)
+        } else{
+            $(`.image`).not ('.'+filter).hide (200)
+            $(`.image`).filter('.'+filter).show(400)
+        }
+    })
+});
+
+
+
+//----------------> magniFiPopup
+
+$(`.gallery`).magnificPopup({
+    delegate: `a`,
+    type: `image`,
+    gallery: {
+        enabled: true
+    }
+    
+})
+
+
+
+
+
 
 // =============================> buyers-Say
         $('.buyers-Say-slider').owlCarousel({

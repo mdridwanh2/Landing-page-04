@@ -285,6 +285,59 @@ header.sticky{
 
 
 
+/* image gallery =======================================>
+-------------------------------------------------------- */
+
+
+#image-gallery{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    padding: 100px 0;
+    
+}
+.image-filter-cnt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: center; */
+}
+.image-filter .active{
+    background-color: #f84a06 !important;
+}
+.image-filter-cnt .image{
+    margin: 10px;
+    height: 250px;
+    width: 350px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.image-filter-cnt .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: all 0.5s ease-in;
+}
+.image-filter-cnt .image:hover img{
+    transform: scale(1.2);
+    transition: all 0.5s ease-in;
+}
+
+/*  ------------------------------------------------->
+image gallery =========================================== */
+
+
+
+
+
 /* ===============================================> counter-card starts   
 ---------------------------------------------------------------*/
 #counter-card{
@@ -292,54 +345,26 @@ header.sticky{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* padding: 40px 0; */
+    padding: 40px 0;
     background-color: #f8f8db;
 }
-.counter-card-grid{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    height: 200px;
-}
-@media (max-width:1120px){
-    .counter-card-grid{
-        grid-template-columns: repeat(2, 1fr);
-        transition: all 0.5s ease-in-out;
-        gap: 50px;
-    }
 
-.counter-card-cnt span{
-    font-size: 40px !important;
-}
-}
-
-@media (max-width:576px){
-    .counter-card-grid{
-        grid-template-columns: repeat(1, 1fr);
-        transition: all 0.5s ease-in-out;
-        gap: 30px;
+@media (max-width:992px){
+    .counter-card-grid .first-line{
+        display: none !important;
     }
 }
 
-/* .counter-card-info{
-    background-color: #041518;
-    cursor: pointer;
-    border: 1px solid #0fe9072f;
-    border-bottom: 8px solid #f80cd9;
-} */
-
-
-/* .counter-card-cnt i{
-    font-size: 70px;
-    color: #f80cd9;
-} */
-
-.counter-card-cnt span{
-    font-family: var(--Oswald-main-font);
-    font-weight: 500;
-    letter-spacing: 2px;
-    color: #ffffff;
+.counter-card-grid .first-line,
+.counter-card-grid .secend-line{
+    border: 1px solid;
+    width: 70px;
+    height: 1px;
+    color: #8d8f8f36;
 }
+
+
+
 
 /* ---------------------------------------------------------------
 ===============================================> counter-card ends  */
@@ -352,6 +377,9 @@ header.sticky{
 
 /* ===============================================> Our-team starts   
 ---------------------------------------------------------------*/
+#Our-team{
+    padding: 100px 0;
+}
 .Our-team-info-gird{
     display: grid;
     grid-template-columns: auto auto auto auto;
