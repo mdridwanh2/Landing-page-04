@@ -555,6 +555,39 @@ element {
 
 
 
+#watch-video{
+    background-image: url(../image/Hero\ Section\ Image\ 02.jpeg);
+    background-position: center;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000b6;
+    background-blend-mode: multiply;
+}
+
+
+
+.watch-video-cnt i{
+    color: #020227;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.watch-video-cnt h2{
+    letter-spacing: 8px;
+}
+
+
+
+
+
+
+
+
+
 
 
 /* ===============================================> Amazing post starts and   
