@@ -139,9 +139,9 @@ $(document).ready (function(){
 
 
 
-//----------------> magniFiPopup
+//----------------> magniFiPopup image
 
-$(`.gallery`).magnificPopup({
+$(`.Our-works-gallery`).magnificPopup({
     delegate: `a`,
     type: `image`,
     gallery: {
@@ -151,6 +151,9 @@ $(`.gallery`).magnificPopup({
 })
 
 
+
+
+//----------------> magniFiPopup play video
 $(document).ready(function() {
     $('.play-video').magnificPopup({
         disableOn: 700,
@@ -162,13 +165,8 @@ $(document).ready(function() {
         iframe: {
           patterns: {
             youtube: {
-              index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
-
-              id: 'v=', // String that splits URL in a two parts, second part should be %id%
-              // Or null - full URL will be returned
-              // Or a function that should return %id%, for example:
-              // id: function(url) { return 'parsed id'; }
-
+              index: 'youtube.com/', 
+              id: 'v=', 
               src: 'https://www.youtube.com/embed/5hPtU8Jbpg0?si=QluNJovi3IY-rnjM' // URL that will be set as a source for iframe.
             },
 
@@ -198,7 +196,7 @@ $(document).ready(function() {
                 // center: true,
                 smartSpeed: 1000,
                 navText: [`<i class='bx bx-chevron-left'></i>`, `<i class='bx bx-chevron-right'></i>`],
-                animateOut: 'fadeOut',
+                // animateOut: 'fadeOut',
                 responsive:{
                     0:{
                         nav: false,

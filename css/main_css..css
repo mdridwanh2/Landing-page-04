@@ -22,6 +22,9 @@ body{
     font-family: var(--Didact-Gothic-2nd-font);
     transition: all 0.3s ease;
 }
+html{
+    scroll-behavior: smooth;
+}
 p{font-size: 16px; font-weight: 400; font-family: var(--Hind-2nd-font); color: var(--light-color-grey-color);}
 
 ul, li{list-style: none;}
@@ -162,18 +165,27 @@ header.sticky{
 }
 
 
+
+
+
 /* ---------------------------------------------------------------
 ===============================================> header ends nvbar  */
+/* .hero-section{
+    z-index: -1 !important;
+} */
 
 .slide{
     display: flex;
     align-items: center;
     padding-top: 80px;
-    
+}
+.slide .btn{
+    background-color: var(--brand-color-yellow-Sunray);
 }
 
 .slide-01,
-.slide-02{
+.slide-02,
+.slide-03{
     background-image: url(../image/Hero\ Section\ Image\ 01.jpeg);
     width: 100%;
     height: 100vh;
@@ -182,13 +194,18 @@ header.sticky{
     background-size: cover;
     background-blend-mode: multiply;
     background-color: #010304b2;
+    
 }
 .slide-02{
     background-image: url(../image/Hero\ Section\ Image\ 02.jpeg) !important;
 }
+.slide-03{
+    background-image: url(../image/Hero\ Section\ Image\ 03.jpeg);
+}
 .hero-section-cnt h1{
     font-family: var(--Hind-2nd-font);
     font-weight: 600!important;
+    letter-spacing: 5px;
 }
 
 
@@ -206,10 +223,15 @@ header.sticky{
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-	background-color: #00a3c49a;
+	background-color: var(--brand-color-yellow-Sunray);
     transition: all 0.5s ease;
 }
 
+.hero-section .owl-dots{
+    position: absolute;
+    width: 100%;
+    bottom: 5% !important;
+}
 
 
 /* ------------------> owl carosul nav or icon here icon buttom */
@@ -277,6 +299,10 @@ header.sticky{
 .Interface-item p{
     border-bottom: 1px solid rgb(199, 196, 196);
 }
+.Interface-item i{
+    font-size: 32px !important;
+    color: var(--brand-color-yellow-Sunray);
+}
 
 /* ---------------------------------------------------------------
 ===============================================> Interface ends  */
@@ -285,18 +311,16 @@ header.sticky{
 
 
 
-/* image gallery =======================================>
+/* Our-works =======================================>
 -------------------------------------------------------- */
-
-
-#image-gallery{
+.Our-works{
     width: 100%;
     /* height: 100vh; */
     background-color: #F7F7F7;
     display: flex;
     justify-content: center !important;
     align-items: center;
-    padding: 100px 0;
+    padding: 130px 0;
     
 }
 .image-filter-cnt{
@@ -304,13 +328,10 @@ header.sticky{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-    justify-content: center; */
+    
 }
 .image-filter .active{
-    background-color: #f84a06 !important;
+    background-color: var(--brand-color-yellow-Sunray) !important;
 }
 .image-filter-cnt .image{
     margin: 10px;
@@ -325,14 +346,35 @@ header.sticky{
     object-fit: cover;
     border-radius: 3px;
     transition: all 0.5s ease-in;
+    
 }
 .image-filter-cnt .image:hover img{
     transform: scale(1.2);
     transition: all 0.5s ease-in;
 }
 
+.image-filter-cnt{
+    position: relative;
+}
+.Our-works-img-overlay{
+    position: absolute;
+    top: 0;
+    
+}
+
 /*  ------------------------------------------------->
-image gallery =========================================== */
+Our-works =========================================== */
+
+
+
+.Why-Choose{
+    padding: 130px 0;
+}
+
+.Why-Choose-info-cnt i{
+    border: 1px solid var(--brand-color-yellow-Sunray);
+}
+
 
 
 
@@ -362,7 +404,9 @@ image gallery =========================================== */
     height: 1px;
     color: #8d8f8f36;
 }
-
+.counter-card-cnt .counter{
+    color: var(--brand-color-yellow-Sunray) !important;
+}
 
 
 
@@ -377,8 +421,8 @@ image gallery =========================================== */
 
 /* ===============================================> Our-team starts   
 ---------------------------------------------------------------*/
-#Our-team{
-    padding: 100px 0;
+.Our-team{
+    padding: 120px 0;
 }
 .Our-team-info-gird{
     display: grid;
@@ -456,10 +500,15 @@ image gallery =========================================== */
 
 
 
+
+
+
+
+
 /* ===============================================> pricing-tables starts   
 ---------------------------------------------------------------*/
-#pricing-tables{
-    background-image: url(../image/Hero\ Section\ Image\ 02.jpeg);
+.pricing-tables{
+    background-image: url(../image/Hero\ Section\ Image\ 03.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -528,7 +577,7 @@ element {
 ---------------------------------------------------------------*/
 
 #buyers-Say{
-    background-color: #f1faee;
+    background-color: #F1FAEE;
 }
 .buyers-Say-slider-items img{
     object-fit: cover;
@@ -555,6 +604,10 @@ element {
 
 
 
+
+
+/* ===============================================> watch-video starts 
+---------------------------------------------------------------*/
 #watch-video{
     background-image: url(../image/Hero\ Section\ Image\ 02.jpeg);
     background-position: center;
@@ -565,9 +618,6 @@ element {
     background-color: #000000b6;
     background-blend-mode: multiply;
 }
-
-
-
 .watch-video-cnt i{
     color: #020227;
     background-color: #fff;
@@ -580,6 +630,15 @@ element {
     letter-spacing: 8px;
 }
 
+/* ---------------------------------------------------------------
+===============================================> watch-video */
+
+
+
+
+#Recnt-stn{
+    padding: 100px 0;
+}
 
 
 
@@ -587,11 +646,67 @@ element {
 
 
 
-
-
-
-/* ===============================================> Amazing post starts and   
+/* ===============================================> recent-news starts and   
 ---------------------------------------------------------------*/
+
+.recent-news{
+    padding: 110px 0;
+}
+
+.Recnt-stn-cnt-icon-text-one,
+.Recnt-stn-cnt-icon-text-two,
+.Recnt-stn-cnt-icon-text-three,
+
+.amazing-post-Image-cnt-icon-text-one,
+.amazing-post-Image-cnt-icon-text-two,
+.amazing-post-Image-cnt-icon-text-three,
+
+.amazing-post-cnt-icon-text-one,
+.amazing-post-cnt-icon-text-two,
+.amazing-post-cnt-icon-text-three{
+    cursor: pointer;
+}
+
+
+.Recnt-stn-cnt-icon-text-one:hover,
+.Recnt-stn-cnt-icon-text-two:hover,
+.Recnt-stn-cnt-icon-text-three:hover,
+
+.amazing-post-Image-cnt-icon-text-one:hover,
+.amazing-post-Image-cnt-icon-text-two:hover,
+.amazing-post-Image-cnt-icon-text-three:hover,
+
+.amazing-post-cnt-icon-text-one:hover,
+.amazing-post-cnt-icon-text-two:hover,
+.amazing-post-cnt-icon-text-three:hover
+
+{
+    color: var(--brand-color-yellow-Sunray);
+    transition: all 0.3s ease-in;
+}
+
+
+
+
+
+
+
+.amazing-post-Image-cnt-icon-text-one:hover p,
+.amazing-post-Image-cnt-icon-text-two:hover p,
+.amazing-post-Image-cnt-icon-text-three:hover p,
+
+.amazing-post-cnt-icon-text-one:hover p,
+.amazing-post-cnt-icon-text-two:hover p,
+.amazing-post-cnt-icon-text-three:hover p,
+
+.Recnt-stn-cnt-icon-text-one:hover p,
+.Recnt-stn-cnt-icon-text-two:hover p,
+.Recnt-stn-cnt-icon-text-three:hover p{
+    color: var(--brand-color-yellow-Sunray);
+    transition: all 0.3s ease-in;
+}
+
+
 .amazing-image-slider{
     object-fit: cover;
 }
@@ -608,8 +723,9 @@ element {
   }
   
 
+
 /* ---------------------------------------------------------------
-===============================================> Amazing post ends */
+===============================================> recent-news ends */
 
 
 
@@ -635,21 +751,58 @@ element {
     color: gray;
 }
 
+
+
+
 .two-footer-favourite-cnt{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 7px;
 }
-.two-footer-favourite-info .view-more .view-more-cnt:hover{
-    color: var(--brand-color-yellow-Sunray) !important;
+
+.Favorites-image img{
     cursor: pointer;
 }
+
+.two-footer-favourite-info .view-more{
+    cursor: pointer;
+}
+
+.two-footer-favourite-info .view-more:hover h3{
+    color: var(--brand-color-yellow-Sunray) !important;
+    transition: all 0.3s ease-in;
+}
+
+.two-footer-favourite-info .view-more:hover i{
+    background-color: var(--brand-color-yellow-Sunray) !important;
+    color: #fff !important;
+    transition: all 0.3s ease-in;
+}
+
+/* .Favorites-image{
+    position: relative;
+} */
+
+/* .favourite-overlay{
+    position: absolute;
+    top: 0;
+} */
+
 
 .two-footer-favourite-info .view-more h3{
     /* padding: 10px 0; */
     font-weight: 500 !important;
     font-size: 15px !important;
 }
+
+.two-footer-About-us-socail-kit i:hover{
+    background-color: var(--brand-color-yellow-Sunray) !important;
+    color: #fff !important;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+
 /* ---------------------------------------------------------------
 ===============================================> two-footer ends */
 
@@ -673,7 +826,10 @@ footer{
     font-size: 15px;
     color: #8d8f8f;
 }
-
+.footer-cnt-list a:hover{
+    color: var(--brand-color-yellow-Sunray) !important;
+    transition: all 0.3s ease-in;
+}
 .main-footer-cnt{
     display: grid;
     grid-template-columns: 2fr 1fr;
