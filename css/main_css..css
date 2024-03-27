@@ -289,23 +289,30 @@ header.sticky{
 
 
 
-/* ===============================================> Interface starts nvbar  
+/* ===============================================> professional starts nvbar  
 ---------------------------------------------------------------*/
-.Interface-tex{
+.professional-text{
     padding: 100px 0;
     width: 100%;
     background-color: #fffafa;
 }
-.Interface-item p{
+
+
+
+.professional-item p{
     border-bottom: 1px solid rgb(199, 196, 196);
 }
-.Interface-item i{
+.professional-item .none-border{
+    border-bottom: none !important;
+}
+
+.professional-item i{
     font-size: 32px !important;
     color: var(--brand-color-yellow-Sunray);
 }
 
 /* ---------------------------------------------------------------
-===============================================> Interface ends  */
+===============================================> professional ends  */
 
 
 
@@ -359,11 +366,18 @@ header.sticky{
 .Our-works-img-overlay{
     position: absolute;
     top: 0;
-    
 }
 
 /*  ------------------------------------------------->
 Our-works =========================================== */
+
+
+
+#Incleible .btn{
+    background-color: var(--brand-color-yellow-Sunray) !important;
+    color: var(--rich-black-color) !important;
+}
+
 
 
 
